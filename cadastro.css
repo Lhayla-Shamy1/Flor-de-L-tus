@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Quicksand:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f39e73; /* amarelo claro */
+    font-family: 'Quicksand', sans-serif;
+    color: #2e1f1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 248, 230, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    max-width: 650px;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ffd9cc;
+}
+
+h1 {
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff6666;
+    text-shadow: 1px 1px #fff3f3;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border: 1.5px solid #fa8072;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background-color: #fff8f5;
+    cursor: text;
+    font-family: 'Quicksand', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #f7a89a;
+    outline: none;
+    box-shadow: 0 0 10px #f7a89a;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover {
+    background-color: #fff2ee;
+    border-color: #f28c77;
+    box-shadow: 0 0 10px #f28c77;
+}
+
+input[type="submit"],
+button {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+/* Botão cadastrar cliente */
+#cadastrarCliente {
+    background-color: #ff99cc;
+    color: white;
+}
+#cadastrarCliente:hover {
+    background-color: #ff7fb5;
+}
+
+/* Botão buscar cliente */
+#buscarCliente,
+#buscarProduto {
+    background-color: #f9e48c;
+    color: #3b2c0a;
+}
+#buscarCliente:hover,
+#buscarProduto:hover {
+    background-color: #e6cc58;
+}
+
+/* Botão atualizar cliente/produto */
+#atualizarCliente,
+#atualizarProduto {
+    background-color: #ffa69e;
+    color: #2e1f1f;
+}
+#atualizarCliente:hover,
+#atualizarProduto:hover {
+    background-color: #ff8a80;
+}
+
+/* Botão deletar cliente/produto */
+#deletarCliente,
+#deletarProduto {
+    background-color: #ff6666;
+    color: white;
+}
+#deletarCliente:hover,
+#deletarProduto:hover {
+    background-color: #e53935;
+}
+
+input[type="submit"]:active {
+    transform: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+}
+/* Estilos base dos botões */
+input[type="submit"] {
+  font-weight: bold;
+  font-family: 'RocknRoll One', sans-serif;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Botão Buscar - Bento Box marrom */
+.btn-buscar {
+  background-color: #8B5E3C;
+  color: white;
+}
+
+.btn-buscar:hover {
+  background-color: #5A3E26;
+}
+
+/* Botão Atualizar - Onigiri creme */
+.btn-atualizar {
+  background-color: #FFF8E7;
+  color: #6B4C3B;
+}
+
+.btn-atualizar:hover {
+  background-color: #F0E6D2;
+}
+
+/* Botão Deletar - Sushi vermelho salmão */
+.btn-deletar {
+  background-color: #E63946;
+  color: white;
+}
+
+.btn-deletar:hover {
+  background-color: #B22222;
+}

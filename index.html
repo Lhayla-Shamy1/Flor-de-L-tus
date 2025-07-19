@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+    <script src="dados.js"></script>
+    <title>Flor de Lótus</title>
+</head>
+<body>
+    <header>
+        
+        <nav id="navbar">
+            <i class="" id="nav_logo"><img src="logo.png" alt=""></i>
+            
+
+
+            <ul id="nav_list">
+                 <li class="nav-item">
+                    <a href="#menu">Início</a>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a href="#menu">Comidas </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#bolo-morango">Sushi</a></li>
+                        <li><a href="#bolo-chocolate">Massas</a></li>
+                        <li><a href="#bolo-coco">Mochi</a></li>
+                        <li><a href="#bolo-nozes">Karê</a></li>
+                    </ul>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a href="#">Cadastro</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cadastrarprod.html">Cadastro de Produtos</a></li>
+                        <li><a href="cliente.html">Cadastro dos clientes</a></li>
+                    </ul>
+                </li>
+               <div class="search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" id="campo-pesquisa" placeholder="Busque aqui...">
+                </div>
+
+            
+
+            </ul>
+            
+            <button class="open-modal" id="login-button">
+                <a href="login.html">Login</a>
+             </button>
+             
+             <span id="user-info" style="display:none; font-weight: bold; margin-left: 10px; gap: 4px;"></span>
+             <button id="logout-button" style="display:none; margin-left: 10px;">Logout</button>
+        
+             <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="#home">Início</a></li>
+                <li class="nav-item dropdown">
+                <a href="#">Cadastros</a>
+                <ul class="dropdown-menu">
+                    <li><a href="cadastrarprod.html">Cadastrar Produtos</a></li>
+                    <li><a href="cadastro.html">Gerenciar Produtos</a></li>
+                    <li><a href="cliente.html">Gerenciar Clientes</a></li>
+                </ul>
+                </li>
+                <li class="nav-item dropdown">
+                <a href="#">Comidas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#bolo-morango">Sushi</a></li>
+                    <li><a href="#bolo-chocolate">Karê</a></li>
+                </ul>
+                </li>
+            </ul>
+
+            
+    </header>
+    
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"> <img src="imgs/main-b.jpg" alt=""></div>
+            <div id="cta">
+                <h1 class="title">
+                    Seja bem-vindo ao seu <span>cantinho</span> do Oriente.
+                </h1>
+
+                
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default">
+                        Confira nossos produtos
+                    </a>
+
+                    
+                </div>
+
+                
+            </div>
+
+        </section>
+
+
+        </section>
+
+
+       
+
+       
+    </main>
+
+   <footer>
+  <div id="footer_items">
+    <div id="copyright" style="display: flex; align-items: center; gap: 12px;">
+      <img src="logo.png" alt="Logo" style="height: 40px; width: auto;">
+      <span>
+        Seu cantinho de sabores asiáticos
+      </span>
+    </div>
+
+    <div class="social-media-buttons">
+      <a href="https://github.com/Lhayla-Shamy1" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.facebook.com/lhayla.shamy.1/" aria-label="Facebook">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyCRUxR9LKrY6aSTSkHEty5iMo3NTweh-Hw",
+    authDomain: "prjeto01.firebaseapp.com",
+    databaseURL: "https://prjeto01-default-rtdb.firebaseio.com",
+    projectId: "prjeto01",
+    storageBucket: "prjeto01.firebasestorage.app",
+    messagingSenderId: "368752428391",
+    appId: "1:368752428391:web:21f0d5aeb2719c2e549bc2"
+};
+    firebase.initializeApp(firebaseConfig);
+
+const loginButton = document.getElementById('login-button');
+const userInfo = document.getElementById('user-info');
+const logoutButton = document.getElementById('logout-button');
+
+const mobileLoginButton = document.getElementById('mobile-login-button');
+const mobileUserInfo = document.getElementById('mobile-user-info');
+const mobileLogoutButton = document.getElementById('mobile-logout-button');
+
+firebase.auth().onAuthStateChanged(function(user) {
+    const justLoggedIn = localStorage.getItem("justLoggedIn");
+
+    if (user && justLoggedIn === "true") {
+        // Extrai a parte antes do @
+        const nomeUsuario = user.email.split("@")[0];
+
+        // Versão desktop
+        loginButton.style.display = 'none';
+        userInfo.style.display = 'inline';
+        userInfo.textContent = `Olá, ${nomeUsuario}`;
+        logoutButton.style.display = 'inline';
+
+        // Versão mobile
+        mobileLoginButton.style.display = 'none';
+        mobileUserInfo.style.display = 'inline';
+        mobileUserInfo.textContent = `Olá, ${nomeUsuario}`;
+        mobileLogoutButton.style.display = 'inline';
+
+        // Limpa flag
+        localStorage.removeItem("justLoggedIn");
+    }
+});
+
+
+
+       // Logout
+    logoutButton.addEventListener('click', function() {
+        firebase.auth().signOut().then(() => {
+            resetUI();
+        });
+    });
+
+    mobileLogoutButton.addEventListener('click', function() {
+        firebase.auth().signOut().then(() => {
+            resetUI();
+        });
+    });
+
+    function resetUI() {
+        loginButton.style.display = 'inline-block';
+        userInfo.style.display = 'none';
+        logoutButton.style.display = 'none';
+
+        mobileLoginButton.style.display = 'inline-block';
+        mobileUserInfo.style.display = 'none';
+        mobileLogoutButton.style.display = 'none';
+
+        localStorage.removeItem("justLoggedIn");
+    }
+    
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", function () {
+        const isVisible = mobileMenu.style.display === "block";
+
+        mobileMenu.style.display = isVisible ? "none" : "block";
+        menuToggle.innerHTML = isVisible
+          ? '<i class="bi bi-list"></i>'
+          : '<i class="bi bi-x"></i>';
+      });
+    }
+  });
+  
+
+</script>
+
+</body>
+</html>

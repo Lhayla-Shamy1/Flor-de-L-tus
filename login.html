@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+</head>
+<body>
+
+<form>
+    <div>
+        <div><label>E-mail</label></div>
+        <input type="email" name="email" id="email" onchange="validateFields()" placeholder="E-mail">
+    </div>
+
+    <div>
+        <div><label>Senha</label></div>
+        <input type="password" name="password" id="password" onchange="validateFields()" placeholder="Senha">
+    </div>
+
+    <div>
+        <button type="button" id="recovery-password-button" disabled="true">Redefinição de senha</button>
+    </div>
+
+    <div>
+        <button type="button" id="login-button" disabled="true" onclick="login()">Login</button>
+    </div>
+<div id="login-error"></div>
+    
+</form>
+</body>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: url('imgs/fundo3.jpg') no-repeat center center fixed;
+        font-family: 'Quicksand', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+    }
+
+    form {
+        background: #fff3e4d7;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    form div {
+        margin-bottom: 1rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+        font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        border-color:  #ff8243;
+        outline: none;
+    }
+
+    button[disabled] {
+        opacity: 0.7;
+    }
+    button {
+        width: 100%;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 8px;
+        background-color: #ff8243;
+        color:  rgb(250, 245, 245);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #ede2b8 ;
+    }
+
+    button + button {
+        margin-top: 0.5rem;
+        background-color: #6c757d;
+    }
+
+    button + button:hover {
+        background-color: #5a6268;
+    }
+</style>
+<script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyCRUxR9LKrY6aSTSkHEty5iMo3NTweh-Hw",
+    authDomain: "prjeto01.firebaseapp.com",
+    databaseURL: "https://prjeto01-default-rtdb.firebaseio.com",
+    projectId: "prjeto01",
+    storageBucket: "prjeto01.firebasestorage.app",
+    messagingSenderId: "368752428391",
+    appId: "1:368752428391:web:21f0d5aeb2719c2e549bc2"
+};
+    firebase.initializeApp(firebaseConfig);
+
+</script>
+
+<script src="login.js"></script>
+</html>

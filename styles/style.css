@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('header.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('footer.css');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.open-modal a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit;
+    border-radius: 60px;
+     padding: 10px 24px; /* mais arredondado */         /* Faz o texto herdar a cor do botão */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.shape {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 850px;
+}
+
+.shape img {
+  width: 90%;
+  max-width: 650px;
+  aspect-ratio: 4/3;
+  border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: rotate(-3deg);
+  transition: transform 0.4s ease;
+}
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* ou 4px se quiser mais colado */
+}
+
+.user-area.mobile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.shape img:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+
+
+  
+
+  margin-left: 40px; /* move para a direita */
+}
+
+.title span {
+    font-family: 'Playfair Display', serif;
+  color: #FF8855;
+}
+
+section {
+    padding: 28px 8%;
+}
+/* Caixa de pesquisa com ícone dentro */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ff8243;
+    border-radius: 20px;
+    padding-left: 35px;
+    height: 35px;
+    width: 220px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-box i {
+    position: absolute;
+    left: 10px;
+    color: #888;
+    font-size: 16px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Responsividade da caixa de pesquisa no mobile */
+@media screen and (max-width: 1170px) {
+    .search-box {
+        width: 90%;
+        margin: 10px auto;
+        padding-left: 35px;
+    }
+
+    .search-box input {
+        font-size: 16px;
+    }
+}
+
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff8243;
+    border-radius: 30px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.btn-default:hover {
+    background-color: #fff3e4;
+}
+
+
+.section-title {
+    color: #ff8243;
+    font-size: 1.563rem;
+}
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #ff8243;
+  border-radius: 20px;
+  padding-left: 35px;
+  height: 35px;
+  width: 200px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 10px;
+  color: #888;
+  font-size: 16px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  width: 100%;
+}
+
+
+.section-subtitle {
+    color: rgba(77, 24, 24, 0.63);
+    font-size: 2.1875rem;
+} 

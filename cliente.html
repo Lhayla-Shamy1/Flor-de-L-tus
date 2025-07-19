@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Clientes</title>
+  <link rel="stylesheet" href="cadastro.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🍣Cadastro de Clientes🍣</h1>
+
+    <!-- Formulário de cadastro -->
+    <form id="formCadastro">
+      <input type="text" id="cpfCliente" placeholder="CPF" required />
+      <input type="email" id="emailCliente" placeholder="Email" required />
+      <input type="text" id="telefoneCliente" placeholder="Telefone" required />
+      <input id="cadastrarCliente" type="submit" value="Cadastrar Cliente" style="background-color: #a3c9a8; color: #1a3d2f;" />
+    </form>
+
+    <hr style="margin: 20px 0; width: 100%;" />
+
+    <!-- Formulário de busca, atualização e exclusão -->
+    <form id="formBuscarAtualizar">
+      <input type="text" id="cpfBusca" placeholder="CPF para buscar" required />
+      <input id="buscarCliente" type="submit" value="Buscar Cliente" style="background-color: #f7b267; color: #5e2c04;" />
+
+      <input type="email" id="emailEncontrado" placeholder="Email Encontrado" required readonly disabled />
+      <input type="text" id="telefoneEncontrado" placeholder="Telefone Encontrado" required readonly disabled />
+
+      <input id="atualizarCliente" type="submit" value="Atualizar Cliente" style="background-color: #f6c177; color: #5e2c04;" />
+      <input id="deletarCliente" type="submit" value="Excluir Cliente" style="background-color: #f67280; color: white;" />
+    </form>
+  </div>
+
+  <script type="module" src="clientes.js"></script>
+</body>
+</html>
