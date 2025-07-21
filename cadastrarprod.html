@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="cadastro.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🥢Cadastro dos produtos🍙</h1>
+
+    <input type="text" id="codigo" placeholder="Código" required />
+    <input type="text" id="produto" placeholder="Nome" required />
+    <input type="text" id="categoria" placeholder="Categoria" required />
+    <input type="text" id="quantidade" placeholder="Quantidade" required />
+    <input type="text" id="valor" placeholder="Valor" required />
+
+    <button id="cadastrarProduto" style="background-color:#ffad99; color:white; border:none; padding:10px 20px; cursor:pointer; margin-top: 10px;">
+      Cadastrar Produto
+    </button>
+
+    <!-- Botão que apenas redireciona -->
+    <button id="buscarProduto" type="button" style="background-color: #e65c00; color: white; font-weight: bold; font-family: 'RocknRoll One', sans-serif; padding: 14px 18px; border-radius: 12px; border: none; margin-top: 15px; cursor: pointer;">
+      Busca de produtos
+    </button>
+  </div>
+
+  <script>
+    // Redirecionamento
+    document.getElementById('buscarProduto').addEventListener('click', () => {
+      window.location.href = 'cadastro.html';
+    });
+  </script>
+  <script type="module" src="cadastrarprod.js"></script>
+</body>
+</html>

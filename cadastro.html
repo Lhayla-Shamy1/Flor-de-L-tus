@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🍣 Gerenciar Produtos 🍣</title>
+  <link rel="stylesheet" href="cadastro.css" />
+  <style>
+    /* Caso queira colocar direto aqui, no <head> */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🍱 Busca dos produtos 🍱</h1>
+
+    <input type="text" id="idProduto" placeholder="Código do Produto" required />
+
+    <input id="buscarProduto" class="btn-buscar" type="submit" value="Buscar Produto" />
+    <input type="text" id="dadoProduto" placeholder="Produto" />
+    <input type="text" id="dadoCategoria" placeholder="Categoria" />
+    <input type="text" id="dadoQuantidade" placeholder="Quantidade" />
+    <input type="text" id="dadoValor" placeholder="Valor" />
+
+    <input id="atualizarProduto" class="btn-atualizar" type="submit" value="Atualizar Produto" />
+    <input id="deletarProduto" class="btn-deletar" type="submit" value="Deletar Produto" />
+  </div>
+
+  <script type="module" src="cadastro.js"></script>
+</body>
+</html>
